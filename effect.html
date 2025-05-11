@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<style> 
+		body { 
+			margin: 0; 
+			padding: 0; 
+			height: 40vh; 
+			display: grid; 
+			place-items: center; 
+			background-color: #e4e2cf; 
+			} 
+		
+			::selection { 
+				color: white; 
+				background-color: rgb(45, 20, 112); 
+			} 
+		
+			button { 
+			position: relative; 
+			font-size: 18px; 
+			font-weight: bold; 
+			height: 45px; 
+			padding: 10px 20px; 
+			background: white; 
+			overflow: hidden; 
+			border-radius: 10px; 
+			border: 2px solid; 
+			color: #334b79; 
+			z-index: 1; 
+			transition: 0.5s all ease; 
+			} 
+		
+			button:hover { 
+			color: white; 
+			cursor: pointer; 
+			border: 0px; 
+			} 
+
+			button:active { 
+			transform: scale(0.85); 
+			} 
+		
+			button:before { 
+			content: ""; 
+			width: 50%; 
+			height: 100%; 
+			margin: auto; 
+			position: absolute; 
+			top: 0%; 
+			left: -50%; 
+			top: -100%; 
+			background: #923777; 
+			transition: all 0.6s ease; 
+			z-index: -1; 
+			} 
+
+			button:hover:before { 
+			top: 0; 
+			left: 0; 
+			border: 0px; 
+			transform: rotate(180deg); 
+			} 
+		
+			button:after { 
+			content: ""; 
+			width: 50%; 
+			height: 100%; 
+			margin: auto; 
+			position: absolute; 
+			top: 0%; 
+			left: 100%; 
+			top: 100%; 
+			background: #d37cdf; 
+			transition: all 0.6s ease; 
+			z-index: -1; 
+			} 
+
+			button:hover:after { 
+			top: 0; 
+			left: 50%; 
+			border: 0px; 
+			transform: rotate(180deg); 
+			} 
+	</style> 
+</head> 
+
+<body> 
+	<h1 style="color:rgb(27, 5, 26)"> 
+		INTRODUCTION TO HTML
+	</h1> 
+	<h2> 
+		Welcome to my simple HTML page and click below!!
+	</h2> 
+	<button>WELCOME IN</button> 
+</body> 
+
+</html>
