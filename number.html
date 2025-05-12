@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Checker</title>
+<script>
+  function checkNumber() {
+    // Get the value from the input field
+    var number = document.getElementById('numberInput').value;
+    
+    // Convert the input to a number
+    number = parseFloat(number); // Use parseFloat to handle decimal numbers
+    
+    // Check if the number is positive, negative, or zero
+    var result;
+    if (number > 0) {
+      result = "Positive";
+    } else if (number < 0) {
+      result = "Negative";
+    } else {
+      result = "Zero";
+    }
+    
+    // Display the result in the result paragraph
+    document.getElementById('result').textContent = "The number is " + result;
+  }
+</script>
+</head>
+<body>
+  <h2>Number Checker</h2>
+  <label for="numberInput">Enter a number:</label>
+  <input type="text" id="numberInput">
+  <button onclick="checkNumber()">Check</button>
+  <p id="result"></p>
+</body>
+</html>
